@@ -1,24 +1,24 @@
 /*****************************************************
-* FileManager.h
+* Executive.hpp
 *
-* This project will create a FileManager for the TestHarness.
+* This project will create an Executive for the TestHarness.
 *
 * Author: Nicole Perez, Ashraf Elnashar
 * Date: April 2019
 * Object Oriented Design - Syracuse University
 *****************************************************/
 
-#ifndef FILE_MANAGER_H
-#define FILE_MANAGER_H
+#ifndef EXECUTIVE_H
+#define EXECUTIVE_H
 
 
 #pragma once
 
-namespace FileManager {
-	class MyFileManager {
+namespace Executive {
+	class myExecutive {
 
 	};
 }
 
 
-#endif // !FILE_MANAGER_H
+#endif // !EXECUTIVE_H

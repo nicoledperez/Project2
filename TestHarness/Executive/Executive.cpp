@@ -9,9 +9,9 @@
 *****************************************************/
 
 #include "pch.h"
-#include "Executive.h"
-#include "../Logger/Logger.h"
-#include "../TestHarness/TestHarness.h"
+#include "Executive.hpp"
+#include "../Logger/Logger.hpp"
+#include "../TestHarness/TestHarness.hpp"
 #include <fstream>
 #include <iostream>
 

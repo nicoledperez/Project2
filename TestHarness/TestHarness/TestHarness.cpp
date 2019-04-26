@@ -9,7 +9,8 @@
 *****************************************************/
 
 #include "pch.h"
-#include "TestHarness.h"
+#include "TestHarness.hpp"
+#include "../Logger/Logger.hpp"
 #include <iostream>
 #include <chrono>
 #include <ctime> 

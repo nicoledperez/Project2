@@ -1,5 +1,5 @@
 /*****************************************************
-* Logger.h
+* Logger.hpp
 *
 * This file creates the Logger Object for the TestHarness.
 *

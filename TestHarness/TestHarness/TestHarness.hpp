@@ -1,5 +1,5 @@
 /*****************************************************
-* TestHarness.h
+* TestHarness.hpp
 *
 * This project will create a Test Harness that can execute
 * one or more tests and provide multiple levels of logging.
@@ -14,7 +14,7 @@
 
 
 #pragma once
-#include "../Logger/Logger.h"
+#include "../Logger/Logger.hpp"
 
 namespace TestHarness {
 	class MyTestHarness {

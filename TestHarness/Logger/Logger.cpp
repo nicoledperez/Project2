@@ -9,7 +9,7 @@
 *****************************************************/
 
 #include "pch.h"
-#include "Logger.h"
+#include "Logger.hpp"
 
 using namespace Logger;
 
@@ -109,4 +109,9 @@ void Log::produceLevelCOutput() {
 			fileStream << "\t" << result.testTimeAndDate << "	" << result.errorMessage << std::endl;
 		}
 	}
+}
+
+int main()
+{
+	std::cout << "Hello World!\n";
 }
