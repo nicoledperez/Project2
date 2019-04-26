@@ -1,0 +1,4 @@
+﻿  pch.cpp
+  Executive.cpp
+Executive.obj : error LNK2019: unresolved external symbol "public: bool __cdecl TestHarness::MyTestHarness::executer(class std::vector<void (__cdecl*)(void),class std::allocator<void (__cdecl*)(void)> >,class Logger::Log)" (?executer@MyTestHarness@TestHarness@@QEAA_NV?$vector@P6AXXZV?$allocator@P6AXXZ@std@@@std@@VLog@Logger@@@Z) referenced in function main
+C:\projects\Project2\Project2\TestHarness\x64\Debug\Executive.exe : fatal error LNK1120: 1 unresolved externals

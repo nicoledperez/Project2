@@ -1,21 +1,67 @@
-// TestHarness.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*****************************************************
+* TestHarness.cpp
+*
+* This file defines the executer method of the TestHarness class.
+*
+* Author: Nicole Perez, Ashraf Elnashar
+* Date: April 2019
+* Object Oriented Design - Syracuse University
+*****************************************************/
 
 #include "pch.h"
+#include "TestHarness.h"
 #include <iostream>
+#include <chrono>
+#include <ctime> 
+
+using namespace TestHarness;
+
+bool MyTestHarness::executer(std::vector<void(*)()> functions, Logger::Log log) {
+	//variable declarations
+	int n = 1;
+	bool testsPassed = true;
+
+	for (auto && fn : functions)
+	{
+		try
+		{
+			//run the current function
+			fn();
+
+			//add the results to the logger for this test
+			const char* m = "";
+
+			//get the time for the logger
+			time_t now = time(0);
+			char t[26];
+			ctime_s(t, sizeof t, &now);
+
+			log.addTestResult(n, true, m, t);
+		}
+		catch (std::exception& e)
+		{
+			//if there was an exception then the test failed so set the return value to false
+			testsPassed = false;
+
+			//add the results to the logger for this test
+			const char* m = e.what();
+
+			//get the time for the logger
+			time_t now = time(0);
+			char t[26];
+			ctime_s(t, sizeof t, &now);
+
+			log.addTestResult(n, false, m, t);
+		}
+		n++;
+	}
+	//print the log info
+	log.printLog();
+
+	return testsPassed;
+}
 
 int main()
 {
     std::cout << "Hello World!\n"; 
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
